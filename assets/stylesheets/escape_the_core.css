@@ -158,7 +158,7 @@ a:hover {
   z-index: 3;
 }
 
-.scores {
+#global-scores {
   position: absolute;
   top: 100px;
   left: 50px;
