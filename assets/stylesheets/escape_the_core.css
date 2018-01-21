@@ -157,3 +157,11 @@ a:hover {
   opacity: 1;
   z-index: 3;
 }
+
+.scores {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  z-index: 7;
+  color: white;
+}
