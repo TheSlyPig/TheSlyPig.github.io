@@ -3140,6 +3140,10 @@
 	height: 550px;
 }
 
+.resume {
+	margin: 20px 0;
+}
+
 .skills {
 	margin-top: 100px;
 	display: flex;
