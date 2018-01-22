@@ -3243,3 +3243,15 @@
 .email-address:hover {
 	text-decoration: underline;
 }
+
+.project-header {
+	display: inline;
+}
+
+.project-header:hover {
+	text-decoration: underline;
+}
+
+.project-header-link {
+	border: 0px;
+}
