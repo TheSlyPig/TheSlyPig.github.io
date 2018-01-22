@@ -14784,7 +14784,7 @@ class Game {
 
 
   doEvilThingsToFirstStage() {
-    if (parseInt(this.ui.score) > 3 && window.difficultyLevel === 1) {
+    if (parseInt(this.ui.score) > 30 && window.difficultyLevel === 1) {
       this.rotateSpeed = 100;
     }
   }
