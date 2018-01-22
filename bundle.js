@@ -14806,11 +14806,11 @@ class Game {
         this.rotateSpeed = 59;
       }
       if (parseInt(this.ui.score) > 35) {
-        this.color = 'white';
+        this.lineWidth = 5;
       }
       if (parseInt(this.ui.score) > 40) {
+        this.color = 'white';
         this.rotateSpeed = 0;
-        this.lineWidth = 13;
       }
       if (parseInt(this.ui.score) > 45) {
         this.rotateSpeed = 59;
@@ -15286,8 +15286,8 @@ class Ui {
     this.stage2LockedDisplay = false;
     this.muteButtonDisplay = false;
 
-    this.stage1Victory = false;
-    this.stage2Victory = false;
+    this.stage1Victory = true;
+    this.stage2Victory = true;
     this.stage3Victory = false;
   }
 
@@ -15496,6 +15496,8 @@ class Ui {
       let childScoreHolder = data.val();
       if (childScoreHolder != undefined) {
         let childScore = childScoreHolder[0];
+        console.log(childScore.stage);
+        console.log(window.difficultyLevel);
         if (window.difficultyLevel == childScore.stage) {
           document.getElementById('scores').innerHTML += 'Stage ' + childScore.stage + ': ' + childScore.score + '<br/>';
         }
