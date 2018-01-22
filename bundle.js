@@ -14839,7 +14839,7 @@ class Game {
       } else if (this.ui.score > 60.0 && window.difficultyLevel === 1 ) {
         if (this.rotateSpeed > 50) this.rotateSpeed -= .05;
         if (this.player.ballSpeed < .18) this.player.ballSpeed += .00005;
-        if (this.lineSpeed1 > 3.5) {
+        if (this.lineSpeed1 < 3.5) {
           this.lineSpeed1 += .001;
           this.lineSpeed2 += .001;
           this.lineLifeTimer -= .0328;
