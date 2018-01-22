@@ -14243,7 +14243,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.difficultyLevel = 1;
     difficultyModifier = 1;
     setBgm();
-    rotateSpeed = 170;
+    rotateSpeed = 160;
     lineSpeed1 = 3.5;
     lineSpeed2 = 1.7;
     lineLifeTimer = 138.7;
@@ -14255,7 +14255,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.difficultyLevel = 2;
     difficultyModifier = 2;
     setBgm();
-    rotateSpeed = 80;
+    rotateSpeed = 106;
     lineSpeed1 = 5.25;
     lineSpeed2 = 3.25;
     lineLifeTimer = 74;
@@ -14786,7 +14786,13 @@ class Game {
 
   doEvilThingsToFirstStage() {
     if (parseInt(this.ui.score) > 30 && window.difficultyLevel === 1) {
-      this.rotateSpeed = 100;
+      this.rotateSpeed = 120;
+    }
+  }
+
+  doEvilThingsToSecondStage() {
+    if (parseInt(this.ui.score) > 30 && window.difficultyLevel === 2) {
+      this.rotateSpeed = 80;
     }
   }
 
@@ -14824,12 +14830,20 @@ class Game {
     if (this.gameActive === true) {
       this.makePatterns(ctx);
 
-      if (this.ui.score > 60.0) {
+      if (this.ui.score > 60.0 && window.difficultyLevel !== 1) {
         if (this.rotateSpeed > 60) this.rotateSpeed -= .05;
-        this.lineSpeed1 += .001;
         if (this.player.ballSpeed < .17) this.player.ballSpeed += .00005;
+        this.lineSpeed1 += .001;
         this.lineSpeed2 += .001;
         this.lineLifeTimer -= .02;
+      } else if (this.ui.score > 60.0 && window.difficultyLevel === 1 ) {
+        if (this.rotateSpeed > 50) this.rotateSpeed -= .05;
+        if (this.player.ballSpeed < .18) this.player.ballSpeed += .00005;
+        if (this.lineSpeed1 > 3.5) {
+          this.lineSpeed1 += .001;
+          this.lineSpeed2 += .001;
+          this.lineLifeTimer -= .0328;
+        }
       }
 
       this.checkCollision();
