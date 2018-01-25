@@ -3197,8 +3197,12 @@
 	margin: 50px auto;
 }
 
+.image {
+	transition: 0.5s;
+}
+
 .image:hover {
-	opacity: .8;
+	opacity: .87;
 }
 
 .p-i-l {
