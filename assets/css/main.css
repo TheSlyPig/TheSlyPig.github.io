@@ -3205,21 +3205,21 @@
 	opacity: .87;
 }
 
-.p-i-l {
+.image-left {
 	background-size: cover;
-	background-position: center;
+	background-position: left;
 	height: 312px;
-	width: 556px;
+	width: 550px;
 }
 
-.p-i-r {
+.image-right {
 	background-size: cover;
 	background-position: center;
 	height: 312px;
 	width: 426px;
 }
 
-.p-i-last {
+.image-last {
 	background-size: cover;
 	background-position: center;
 	height: 318px;
@@ -3258,4 +3258,10 @@
 
 .project-header-link {
 	border: 0px;
+}
+
+.project-icon {
+	margin: 0 14px;
+	color: black;
+	font-size: 165%;
 }
