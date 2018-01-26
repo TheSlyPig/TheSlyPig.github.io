@@ -3129,11 +3129,16 @@
 
 .header-photo {
 	margin: auto;
-	height: 350px;
-	width: 350px;
+	height: 330px;
+	width: 330px;
 	border-radius: 50%;
 	background-size: cover;
 	background-position: center;
+}
+
+#header .header-text {
+	font-size: 110%;
+	line-height: 29px;
 }
 
 .skills-container {
@@ -3141,7 +3146,8 @@
 }
 
 .resume {
-	margin: 20px 0;
+	margin-top: 15px;
+	margin-bottom: -30px;
 }
 
 .skills {
@@ -3163,6 +3169,14 @@
 
 #header {
 	padding-top: 30px;
+}
+
+.container .pitch-header {
+	margin-bottom: 16px;
+}
+
+.pitch {
+	line-height: 42px;
 }
 
 .my-skill {
