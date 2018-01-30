@@ -3145,13 +3145,18 @@
 	height: 550px;
 }
 
+.skills-container h2 {
+	margin-top: -30px;
+	margin-bottom: 50px;
+}
+
 .resume {
 	margin-top: 15px;
 	margin-bottom: -30px;
 }
 
 .skills {
-	margin-top: 100px;
+	margin-top: 90px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
